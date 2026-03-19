@@ -58,7 +58,6 @@ const createAndInjetcionMenu = () => {
 
 }
 
-
 export function createHeader(pageName) {
 
     //validar se não é página de login
@@ -66,10 +65,18 @@ export function createHeader(pageName) {
     if (pageName !== 'Login')
         createAndInjetcionMenu();
 
+    const logout = pageName !== 'Login' ?
+        `<ion-buttons slot = "end">
+            <ion-button id = "logout-btn"> 
+                <ion-icon name = "log-out-outline" slot = "icon-only">
+                </ion-icon>
+            </ion-button>
+        </ion-buttons>` : ""
+
     const start = pageName !== 'Login' ?
         `<ion-buttons slot ='start'> 
-        <ion-menu-button></ion-menu-button>
-        </ion-buttons>` : 
+            <ion-menu-button></ion-menu-button>
+            </ion-buttons>` :
         `<ion-icon name="cafe" style="margin-left: 15px; font-size: 24px;" 
         slot="start"></ion-icon>`;
 
@@ -77,6 +84,7 @@ export function createHeader(pageName) {
             <ion-toolbar color="secondary">
                 ${start}
                 <ion-title>Quero Café Bar - ${pageName}</ion-title>
+                ${logout}
             </ion-toolbar>
         </ion-header>
     `;
