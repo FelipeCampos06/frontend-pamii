@@ -1,4 +1,4 @@
-import './produtoPage.css'
+import './ProdutoPage.css'
 import { createHeader } from '../../shared/Header.js'
 
 const pageName = 'Produtos';

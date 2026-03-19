@@ -1,9 +1,9 @@
-import './usuarioPage.css'
+import './UsuarioPage.css'
 import { createHeader } from '../../shared/Header.js'
 
 const pageName = 'Usuario';
 
-class usuarioPage extends HTMLElement {
+class UsuarioPage extends HTMLElement {
     connectedCallback() {
         this.classList.add('ion-page');
         const cabecalho = createHeader(pageName);
@@ -13,4 +13,4 @@ class usuarioPage extends HTMLElement {
     }
 }
 
-customElements.define('usuario-page', usuarioPage);
+customElements.define('usuario-page', UsuarioPage);

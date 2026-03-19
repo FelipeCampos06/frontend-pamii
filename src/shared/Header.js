@@ -8,7 +8,6 @@ const createAndInjetcionMenu = () => {
 
     mainContent.id = contentId;
 
-    // 🔹 Recupera usuário
     const usuario = localStorage.getItem('usuario') || 'Admin';
 
     const menu = document.createElement('ion-menu');
@@ -67,7 +66,7 @@ export function createHeader(pageName) {
 
     const logout = pageName !== 'Login' ?
         `<ion-buttons slot = "end">
-            <ion-button id = "logout-btn"> 
+            <ion-button id = "logout-btn" onclick = "logout"> 
                 <ion-icon name = "log-out-outline" slot = "icon-only">
                 </ion-icon>
             </ion-button>
