@@ -38,7 +38,6 @@ class LoginPage extends HTMLElement {
         `;
 
         //  Referências
-
         const userInput = this.querySelector('#usuario');
         const passInput = this.querySelector('#senha');
         const btnLogin = this.querySelector('#login');
