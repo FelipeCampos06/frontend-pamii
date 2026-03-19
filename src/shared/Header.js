@@ -8,6 +8,9 @@ const createAndInjetcionMenu = () => {
 
     mainContent.id = contentId;
 
+    // 🔹 Recupera usuário
+    const usuario = localStorage.getItem('usuario') || 'Admin';
+
     const menu = document.createElement('ion-menu');
     menu.contentId = contentId;
 
@@ -18,11 +21,22 @@ const createAndInjetcionMenu = () => {
             </ion-toolbar>
         </ion-header>
         <ion-content>
-            <ion-list>
-                <ion-item button class = "menu-item" data-url = "/home">
-                    <ion-label>Home</ion-label>
-                </ion-item>
-            </ion-list>
+
+        <ion-list>
+            <ion-item button class = "menu-item" data-url = "/home">
+                <ion-label>Home</ion-label>
+            </ion-item>
+
+            <ion-item button class = "menu-item" data-url = "/usuario/list">
+                <ion-label>${usuario}</ion-label>
+            </ion-item>
+
+
+            <ion-item button class = "menu-item" data-url = "/produtos/list">
+                <ion-label>Produtos</ion-label>
+            </ion-item>
+        </ion-list>
+
         </ion-content>
     `;
 
@@ -33,7 +47,7 @@ const createAndInjetcionMenu = () => {
 
             //verifica se a rota existe e se é a mesma página
 
-            if (router && window, location.hash.substring(1) !== url)
+            if (router && window.location.hash.substring(1) !== url)
                 router.push(url, 'root')
             await menu.close();
 

@@ -9,6 +9,7 @@ class LoginPage extends HTMLElement {
         const cabecalho = createHeader(pageName);
         this.innerHTML = `
             ${cabecalho}
+            
             <div class="container">
                 <ion-card>
                     <ion-card-header>
@@ -35,7 +36,6 @@ class LoginPage extends HTMLElement {
                 </ion-card>
             </div>
         `;
-
 
         //  Referências
 
@@ -82,13 +82,7 @@ class LoginPage extends HTMLElement {
             return toast.present();
             
         }
-
-
-
     }
-
-
-
 }
 
 customElements.define('login-page', LoginPage);
