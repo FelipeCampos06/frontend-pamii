@@ -1,5 +1,6 @@
 import './LoginPage.css'
 import { createHeader } from '../../shared/Header.js'
+import { logout } from '../../shared/util.js';
 
 const pageName = 'Login';
 
@@ -80,7 +81,10 @@ class LoginPage extends HTMLElement {
             document.body.appendChild(toast);
             return toast.present();
             
-        }
+        } 
+        
+        this.querySelector('#/logout-btn').addEventListener('click', logout);
+
     }
 }
 customElements.define('login-page', LoginPage);

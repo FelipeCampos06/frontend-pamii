@@ -8,7 +8,7 @@ const createAndInjetcionMenu = () => {
 
     mainContent.id = contentId;
 
-    const usuario = localStorage.getItem('usuario') || 'Admin';
+    const usuario = localStorage.getItem('usuario') || 'Usuário';
 
     const menu = document.createElement('ion-menu');
     menu.contentId = contentId;
