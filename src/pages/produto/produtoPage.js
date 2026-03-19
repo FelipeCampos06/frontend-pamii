@@ -1,9 +1,9 @@
 import './produtoPage.css'
 import { createHeader } from '../../shared/Header.js'
 
-const pageName = 'Produto';
+const pageName = 'Produtos';
 
-class produtoPage extends HTMLElement {
+class ProdutoPage extends HTMLElement {
     connectedCallback() {
         this.classList.add('ion-page');
         const cabecalho = createHeader(pageName);

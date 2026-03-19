@@ -29,3 +29,4 @@ import '@ionic/core/css/display.css';
 import './pages/login/LoginPage.js';
 import './pages/home/HomePage.js';
 import './pages/usuario/usuarioPage.js';
+import './pages/produto/produtoPage.js';
