@@ -1,3 +1,8 @@
+/* usar install npm
+
+    para rodar utilize npm run dev
+
+*/
 const createAndInjetcionMenu = () => {
 
     if (document.querySelector('ion-menu'))
