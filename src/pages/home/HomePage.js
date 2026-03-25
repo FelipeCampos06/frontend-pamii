@@ -10,8 +10,8 @@ class HomePage extends HTMLElement {
         const cabecalho = createHeader(pageName);
         this.innerHTML = `
             ${cabecalho}
-        `;
-
+        
+    `;
         this.querySelector('#/logout-btn').addEventListener('click', logout);
     
     }
