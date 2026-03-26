@@ -12,7 +12,7 @@ class UsuarioPage extends HTMLElement {
             ${cabecalho}
         `;
         
-        this.querySelector('#/logout-btn').addEventListener('click', logout);
+        this.querySelector('#logout-btn').addEventListener('click', logout);
     
     }
 }

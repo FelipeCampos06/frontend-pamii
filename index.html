@@ -1,21 +1,35 @@
 <!doctype html>
+
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quero Café Bar</title>
   </head>
+
   <body>
     <ion-app>
       <ion-router id="main-router" use-hash="false">
+
+        <!-- Pages --> 
         <ion-route-redirect from="/" to="/login"></ion-route-redirect>
         <ion-route url="/login" component="login-page"></ion-route>
         <ion-route url="/home" component="home-page"></ion-route>
+        
+        <!-- Usuário -->        
         <ion-route url="/usuario/list" component="usuario-page"></ion-route>    
-        <ion-route url="/produtos/list" component="produto-page"></ion-route>   
-      </ion-router>
+       
 
+        <!-- Produtos-->
+        <ion-route url="/produtos/list" component="list-produto-page"></ion-route>     
+        <ion-route url="/produtos/create" component="cad-produto-page"></ion-route>
+        <ion-route url="/produtos/edit" component="edit-produto-page"></ion-route>
+   
+      </ion-router>
+    
+    
       <ion-nav id="main-nav"></ion-nav>
     </ion-app>
     <script type="module" src="/src/main.js"></script>

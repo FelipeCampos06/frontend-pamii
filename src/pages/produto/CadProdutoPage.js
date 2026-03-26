@@ -1,20 +1,20 @@
-import './HomePage.css'
+import './CadProdutoPage.css'
 import { createHeader } from '../../shared/Header.js'
 import { logout } from '../../shared/util.js';
 
-const pageName = 'Home';
+const pageName = 'Cadastrar Produtos';
 
-class HomePage extends HTMLElement {
+class CadProdutoPage extends HTMLElement {
     connectedCallback() {
         this.classList.add('ion-page');
         const cabecalho = createHeader(pageName);
         this.innerHTML = `
             ${cabecalho}
-        
-    `;
+        `;
+
         this.querySelector('#logout-btn').addEventListener('click', logout);
-    
+
     }
 }
 
-customElements.define('home-page', HomePage);
+customElements.define('cad-produto-page', CadProdutoPage);

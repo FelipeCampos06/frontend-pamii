@@ -83,7 +83,7 @@ class LoginPage extends HTMLElement {
             
         } 
         
-        this.querySelector('#/logout-btn').addEventListener('click', logout);
+        this.querySelector('#logout-btn').addEventListener('click', logout);
 
     }
 }

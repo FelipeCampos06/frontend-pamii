@@ -1,10 +1,10 @@
-import './ProdutoPage.css'
+import './EditProdutoPage.css'
 import { createHeader } from '../../shared/Header.js'
 import { logout } from '../../shared/util.js';
 
-const pageName = 'Produtos';
+const pageName = 'Editar Produtos';
 
-class ProdutoPage extends HTMLElement {
+class EditProdutoPage extends HTMLElement {
     connectedCallback() {
         this.classList.add('ion-page');
         const cabecalho = createHeader(pageName);
@@ -12,9 +12,9 @@ class ProdutoPage extends HTMLElement {
             ${cabecalho}
         `;
 
-        this.querySelector('#/logout-btn').addEventListener('click', logout);
+        this.querySelector('#logout-btn').addEventListener('click', logout);
 
     }
 }
 
-customElements.define('produto-page', ProdutoPage);
+customElements.define('edit-produto-page', EditProdutoPage);

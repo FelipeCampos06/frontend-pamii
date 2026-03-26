@@ -49,27 +49,29 @@ const createAndInjetcionMenu = () => {
 
     menu.innerHTML = `
         <ion-header>
+
             <ion-toolbar color = "secondary">
                 <ion-title> Menu </ion-title>
             </ion-toolbar>
-        </ion-header>
-        <ion-content>
 
+        </ion-header>
+
+        <ion-content>
         <ion-list>
+
             <ion-item button class = "menu-item" data-url = "/home">
                 <ion-label>Home</ion-label>
             </ion-item>
+
+            <ion-item button class = "menu-item" data-url = "/produtos/list">
+                <ion-label>Produtos</ion-label>
+            </ion-item> 
 
             <ion-item button class = "menu-item" data-url = "/usuario/list">
                 <ion-label>${usuario}</ion-label>
             </ion-item>
 
-
-            <ion-item button class = "menu-item" data-url = "/produtos/list">
-                <ion-label>Produtos</ion-label>
-            </ion-item>
         </ion-list>
-
         </ion-content>
     `;
 
