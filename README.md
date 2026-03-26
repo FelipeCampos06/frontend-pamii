@@ -24,8 +24,7 @@
 
     Caso dê erro use :
 
-    git remote remove origin
-    https://github.com/FelipeCampos06/frontend-pamii
+    git remote remove origin https://github.com/FelipeCampos06/frontend-pamii
 
 
     git pull origin master --rebase 
