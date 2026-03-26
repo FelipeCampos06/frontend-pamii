@@ -32,5 +32,5 @@
 
 Integrantes:
 
-    * Felipe Campos
-    * Philipe Pivati
+    * Felipe Campos RM 24338
+    * Philipe Pivati RM 28366
