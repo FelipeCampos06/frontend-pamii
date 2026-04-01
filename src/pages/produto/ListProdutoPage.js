@@ -24,14 +24,14 @@ class ListProdutoPage extends HTMLElement {
         this.querySelector('#logout-btn').addEventListener('click', logout);
 
         // Buscando produtos
-        const produtos = JSON.parse(this.fetchProdutos());
+        const produtos = this.fetchProdutos() || [];
         
         // Renderizando os produtos no HTML 
         this.renderProdutos(produtos);
 
     }
 
-    async fetchProdutos() {
+    fetchProdutos() {
         return [
                 {
                     "id": 1,
@@ -71,40 +71,30 @@ class ListProdutoPage extends HTMLElement {
         }
 
         const produtoItems = produtos.map(produto => `
-                
-                <ion-item>
-                    <ion-label>
-                        <h2 style = "display: flex ; align-items: center; gap : 8px;">
-                            <ion-icon 
-                                name = "${produto.status == 1 ? 'chekmark-circle' : 'close-circle'}"
-                                color = "${produto.status == 1 ? 'success' : 'danger'}"
-                                style = "flex-shrink: 0;"
-                            >
+            <ion-item>
+                <ion-label>
+                    <h2 style="display: flex; align-items: center; gap: 8px;">
+                        <ion-icon
+                            name="${produto.status ? 'checkmark-circle' : 'close-circle'}"
+                            color="${produto.status ? 'success' : 'danger'}"
+                            style="flex-shrink: 0;"
+                        ></ion-icon>
+                        <span>${produto.dsc_produto}</span>
+                    </h2>
+                    <p>${formatMoeda(produto.valor_unit)}</p>
+                </ion-label>
 
-                            <span> ${produto.dsc_produto} </span>
-
-                            </ion-icon>
-                        </h2>
-
-                        <p> ${formatMoeda(produto.valor_unit)} </p>
-                    </ion-label>
-
-                    <ion-buttons slot ="end"> 
-                        <ion-button fill = "clear" class = "btn-edit" data-id="${produto.id}">
-                            <ion-icon slot = "icon-only" name = "create-outline"></ion-icon>
-                        </ion-button >
-
-                        <ion-button fill = "clear" color = "danger" class = "btn-delete" data-id="${produto.id}">
-                            <ion-icon slot = "icon-only" name = "trash-outline"></ion-icon>
-                        </ion-button >
-                    </ion-buttons>
-                </ion-item>
-
-                `).join('');
-
-        container.innerHTML = `<ion-list>${produtoItems}</ion-list>`
-
-
+                <ion-buttons slot="end">
+                    <ion-button fill="clear" class="btn-edit" data-id="${produto.id}">
+                        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button fill="clear" color="danger" class="btn-delete" data-id="${produto.id}">
+                        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-item>`).join('');
+    
+        container.innerHTML = `<ion-list>${produtoItems}</ion-list>`;
     }
 
 }
