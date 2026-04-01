@@ -32,7 +32,7 @@ class ListProdutoPage extends HTMLElement {
     }
 
     async fetchProdutos() {
-        return `{
+        return [
                 {
                     "id": 1,
                     "dsc_produto": "Macarronada",
@@ -51,7 +51,7 @@ class ListProdutoPage extends HTMLElement {
                     "valor_unit": 40.99,
                     "status": 1
                 }
-        }`
+            ]
 
     }
 
