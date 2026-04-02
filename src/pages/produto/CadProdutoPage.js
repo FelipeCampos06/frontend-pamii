@@ -12,7 +12,7 @@ class CadProdutoPage extends HTMLElement {
             ${cabecalho} 
 
         <ion-content class = "ion-padding">
-            <from id = "from=produto">
+            <form id = "from=produto">
                 <ion-list>
                     <ion-item>
                         <ion-input type = "text" name = "dsc_produto" label = "Descrição do produto" label-placement = "floating" required>
@@ -30,8 +30,20 @@ class CadProdutoPage extends HTMLElement {
                         <ion-toggle slot = "end" name = "status" checked></ion-toggle> 
                     </ion-item>
                 </ion-list>  
-            </from>
+            </form>  
+
+             <div class = "ion-padding">
+                    <ion-button expand = "block" type = "submit" class = "ion-margin-top">
+                        Salvar edição
+                    </ion-button>
+
+                    <ion-button expand = "block" color = "danger" id = "btn-cancelar">
+                        Cancelar
+                    </ion-button>
+                </div>
         </ion-content>
+
+           
 
         `;
 

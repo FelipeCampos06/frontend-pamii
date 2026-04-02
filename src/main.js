@@ -31,6 +31,9 @@ import './pages/home/HomePage.js';
 
 //Usuário
 import './pages/usuario/UsuarioPage.js';
+import './pages/usuario/CadUsuarioPage.js';
+import './pages/usuario/EditUsuarioPage.js';
+import './pages/usuario/ListUsuarioPage.js';
 
 //Produtos
 import './pages/produto/ListProdutoPage.js';

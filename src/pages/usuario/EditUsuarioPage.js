@@ -1,27 +1,40 @@
-import './EditProdutoPage.css'
+import './EditUsuarioPage.css'
 import { createHeader } from '../../shared/Header.js'
 import { logout } from '../../shared/util.js';
 
-const pageName = 'Editar Produtos';
+const pageName = 'Edição do Usuário';
 
-class EditProdutoPage extends HTMLElement {
+class EditUsuarioPage extends HTMLElement {
     connectedCallback() {
         this.classList.add('ion-page');
         const cabecalho = createHeader(pageName);
-               this.innerHTML = `
-            ${cabecalho} 
+        this.innerHTML = `
+            ${cabecalho}
 
-        <ion-content class = "ion-padding">
-            <form id = "form=produto">
+            <ion-content class = "ion-padding">
+            <form id = "form=usuario">
                 <ion-list>
                     <ion-item>
-                        <ion-input type = "text" name = "dsc_produto" label = "Nome do produto" value = "Pastel" label-placement = "floating" required>
+                        <ion-input type = "text" name = "dsc_produto" label = "Nome do usuário" 
+                         label-placement = "floating" value = "Klebin" required>
+                        </ion-input> 
+                    </ion-item>
+                    
+                    <ion-item>
+                        <ion-input type="text" name="usuario" label="Usuário" 
+                            label-placement="floating" value = "Klebin123" required>
+                        </ion-input> 
+                    </ion-item>
+                  
+                    <ion-item>
+                        <ion-input type="password" name="senha" value = "123456" label="Senha" 
+                            label-placement="floating" required>
                         </ion-input> 
                     </ion-item>
 
                     <ion-item>
-                        <ion-input type = "number" step = "0.01" name = "valor_unit" 
-                        label = "Valor Unitário" label-placement  = "floating" value = "9.99" required>
+                        <ion-input type="text" name="perfil" label="Perfil" 
+                            label-placement="floating" value = "1" required>
                         </ion-input> 
                     </ion-item>
 
@@ -51,4 +64,4 @@ class EditProdutoPage extends HTMLElement {
     }
 }
 
-customElements.define('edit-produto-page', EditProdutoPage);
+customElements.define('edit-usuario-page', EditUsuarioPage);
